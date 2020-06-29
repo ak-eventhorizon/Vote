@@ -3,15 +3,44 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>TEMPLATE</title>
+    <title>Vote!</title>
 
     <link rel="stylesheet" href="./styles/styles.css">
     <script src="./js/script.js" defer></script>
 </head>
 
 <body>
+
+    <div class="wrapper">
+
+        <div class="main">
+            <div class="question">Вы одобряете изменения в Конституци<span>и</span> Российской Федерации?</div>
+            <div class="answers">
+                <div id="yes">Да</div>
+                <div id="no">Нет</div>
+            </div>
+        </div>
+
+        <div class="are-you-sure">
+            <div class="question">Ты хорошо подумал?</div>
+            <div class="angry-p"></div>
+            <div class="answers">
+                <div id="sure-yes">Да!</div>
+                <div id="sure-no">Я еще подумаю...</div>
+            </div>
+        </div>
+
+        <div class="done">
+            <div class="question">Вы выбрали вариант <span>ДА</span><br>
+                Ваш голос учтен.<br>
+                Вы больше не нужны.
+            </div>
+            <div class="old-p"></div>
+        </div>
+
+    </div>
     
 </body>
 </html>

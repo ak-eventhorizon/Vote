@@ -1,38 +1,132 @@
-/****************************** COLOR SCHEME - BEGIN ******************************/
-:root {
-	--pure-black: #000000;  /* color: var(--pure-black) */
-	--pure-white: #ffffff;  /* color: var(--pure-white) */
-}
-/****************************** COLOR SCHEME - END ******************************/
-
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
+.wrapper {
+	width: 100vmin;
+	margin: auto;
+	position: relative;
+}
 
+.main {
+	width: 100vmin;
+    height: 100vmin;
+	
+	background-color: #80808038;
+}
 
+.question {
+	height: 25vmin;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 7vmin;
+}
 
+.question > span {
+	color: red;
+	font-weight: bold;
+} 
 
+.main .answers {
+	padding: 0 5vmin;
+	display: grid;
+	gap: 3vmin;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 21vmin 21vmin 21vmin;
+	grid-template-areas: 
+	'. . .'
+	'yes . no'
+	'. . .';
 
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10vmin;
+	font-weight: bold;
+	line-height: 19vmin;
+}
 
+#yes {
+	grid-area: yes;
+}
 
-/****************************** @MEDIA - BEGIN ******************************/
-/*	typical checkpoints - DELETE unused		*/
+#no {
+	grid-area: no;
+}
 
-/* Extra small devices (phones, <<<--600px and down) */
-@media only screen and (max-width: 600px) {} 
+#yes, #no {
+	border: 0.7vmin solid black;
+	border-radius: 3vmin;
+}
 
-/* Small devices (portrait tablets and large phones, 601px-->>> and up) */
-@media only screen and (min-width: 601px) {} 
+#yes:hover, #no:hover {
+	background-color: #f0ffff;
+	cursor: pointer;
+}
 
-/* Medium devices (landscape tablets, 768px-->>> and up) */
-@media only screen and (min-width: 768px) {} 
+.are-you-sure {
+	width: 100vmin;
+	height: 100vmin;
+	z-index: 2;
+	/* position: absolute; */
+	/* top: 0; */
 
-/* Large devices (laptops/desktops, 992px-->>> and up) */
-@media only screen and (min-width: 992px) {} 
+	background-color: aquamarine;
+}
 
-/* Extra large devices (large laptops and desktops, 1200px-->>> and up) */
-@media only screen and (min-width: 1200px) {}
-/****************************** @MEDIA - END ******************************/
+.are-you-sure > .question {
+	line-height: 25vmin;
+}
+
+.are-you-sure > .angry-p {
+	height: 50vmin;
+	background-image: url(../img/angry-p.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.are-you-sure .answers {
+	padding: 2vmin;
+	display: grid;
+	gap: 3vmin;
+	grid-template-columns: 1fr 2fr;
+	grid-template-areas: 'sure-yes sure-no';
+
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 6vmin;
+	font-weight: bold;
+	line-height: 20vmin;
+}
+
+#sure-yes, #sure-no {
+	border: 0.7vmin solid black;
+	border-radius: 3vmin;
+}
+
+#sure-yes:hover, #sure-no:hover {
+	background-color: #f0ffff;
+	cursor: pointer;
+}
+
+.done {
+	width: 100vmin;
+	height: 100vmin;
+	z-index: 3;
+
+	display: grid;
+	align-items: center;
+	/* position: absolute; */
+	/* top: 0; */
+
+	background-color: #9e9e9e;
+}
+
+.old-p {
+	height: 50vmin;
+    background-image: url(../img/old-p.png);
+    background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
