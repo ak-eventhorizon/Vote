@@ -73,7 +73,7 @@ function changeMainQuestions(){
     mainBtnNo.addEventListener('click', () => {displayDone();});
 }
 
-mainBtnYes.addEventListener('click', () => {displayDone();});
 mainBtnNo.addEventListener('mouseenter', mouseEnterHandler);
+mainBtnYes.addEventListener('click', () => {displayDone();});
 sureBtnYes.addEventListener('click', () => {displayDone();});
 sureBtnNo.addEventListener('click', () => {changeMainQuestions();});
