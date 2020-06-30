@@ -70,10 +70,14 @@ function changeMainQuestions(){
     hideAreYouSure();
     
     mainBtnNo.removeEventListener('mouseenter', mouseEnterHandler);
+    mainBtnNo.removeEventListener('click', mouseEnterHandler); // для сенсорных экранов
+
     mainBtnNo.addEventListener('click', () => {displayDone();});
 }
 
 mainBtnNo.addEventListener('mouseenter', mouseEnterHandler);
+mainBtnNo.addEventListener('click', mouseEnterHandler); // для сенсорных экранов
 mainBtnYes.addEventListener('click', () => {displayDone();});
+
 sureBtnYes.addEventListener('click', () => {displayDone();});
 sureBtnNo.addEventListener('click', () => {changeMainQuestions();});
