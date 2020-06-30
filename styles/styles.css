@@ -4,6 +4,12 @@
 	box-sizing: border-box;
 }
 
+body {
+	height: 100vh;
+	display: grid;
+	align-items: center;
+}
+
 .wrapper {
 	width: 100vmin;
 	margin: auto;
@@ -14,7 +20,7 @@
 	width: 100vmin;
     height: 100vmin;
 	
-	background-color: #80808038;
+	background-color: #ffffff;
 }
 
 .question {
@@ -69,10 +75,11 @@
 	width: 100vmin;
 	height: 100vmin;
 	z-index: 2;
-	/* position: absolute; */
-	/* top: 0; */
 
-	background-color: aquamarine;
+	position: absolute;
+	top: -1000%;
+
+	background-color: #ffffff;
 }
 
 .are-you-sure > .question {
@@ -117,16 +124,23 @@
 
 	display: grid;
 	align-items: center;
-	/* position: absolute; */
-	/* top: 0; */
 
-	background-color: #9e9e9e;
+	position: absolute;
+	top: -1000%;
+
+	background-color: #ffffff;
 }
 
 .old-p {
 	height: 50vmin;
+    width: 65vmin;
+	margin: auto;
+	
     background-image: url(../img/old-p.png);
     background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
+    background-position: center;
+	background-size: cover;
+	
+    border-radius: 10px;
+    overflow: hidden;
 }
