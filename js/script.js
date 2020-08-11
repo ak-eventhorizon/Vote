@@ -14,7 +14,7 @@ function displayAreYouSure(){
 }
 
 function hideAreYouSure(){
-    areYouSure.style.top = '1000%';
+    areYouSure.style.top = '-1000%';
 }
 
 function displayDone(){
